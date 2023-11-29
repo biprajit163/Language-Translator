@@ -4,8 +4,9 @@ import sys
 
 openai.api_key = os.environ['OPENAI_API_KEY']
 
-text = "Hey how are you, what did you do today? I saw a beautiful sunset in the park."
-target_language = "portuguese"
+target_language = input("What language do you want tranlate to?\n>".strip())
+text = input("What do you want to translate?\n>".strip())
+
 
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
